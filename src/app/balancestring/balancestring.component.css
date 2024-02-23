@@ -1,0 +1,86 @@
+.title {
+    margin-bottom: 40px;
+}
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .UploadedFilecontainer {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+  
+  input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 2px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .progress {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .progressbar {
+    height: 20px;
+    border-radius: 5px;
+    background-color: #45a049;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+  }
+  
+  .image {
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  
+  .image img {
+    max-width: 100%;
+    height: auto;
+  }

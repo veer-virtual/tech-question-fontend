@@ -1,0 +1,30 @@
+<div class="container">
+    <h2 class="title">Balance Substring</h2>
+    <input
+      type="input"
+      id="fileInput"
+      name="file"
+      (input)="handleChangeValue($event)"
+      placeholder="Enter string"
+    />
+    <span *ngIf="isError !== ''" class="error">
+      {{ isError }}
+    </span>
+  <Br/>
+    <button type="submit" (click)="getBalancedSubstring()">Submit</button>
+  </div>
+  
+  <div *ngIf="balanceString.length > 0" class="UploadedFilecontainer">
+    <h2 class="title">Balanced Strings</h2>
+    <div class="image-grid">
+      [{{ balanceString }}]
+    </div>
+  </div>
+
+  <div *ngIf="initialMessate!= '' && balanceString.length == 0" class="UploadedFilecontainer">
+    <h2 class="title">Balanced Strings</h2>
+    <div class="image-grid">
+      String is not balanced
+    </div>
+  </div>
+  

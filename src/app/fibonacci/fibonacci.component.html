@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 class="title">Fibonacci</h2>
+  <input
+    type="input"
+    id="fileInput"
+    name="file"
+    (input)="handleChangeValue($event)"
+    placeholder="Enter number"
+  />
+  <span *ngIf="isError !== ''" class="error">
+    {{ isError }}
+  </span>
+<Br/>
+  <button type="submit" (click)="generateFibonacci()">Submit</button>
+</div>
+
+<div *ngIf="fibonacciPositionValue != 0" class="UploadedFilecontainer">
+  <h2 class="title">Fibonacci Position Value</h2>
+  <div class="image-grid">
+    {{ fibonacciPositionValue }}
+  </div>
+</div>

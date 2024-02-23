@@ -1,0 +1,40 @@
+<!-- <ul>
+  <li>Fibonacci</li>
+  <li>Fibonacci2</li>
+</ul> -->
+<div class="container">
+  <h2 class="title">File Upload Demo</h2>
+  <input type="file" id="fileInput" name="file" (change)="chooseFile($event)" />
+  <span *ngIf="isError !== ''" class="error">
+    {{ isError }}
+  </span>
+  <button type="submit" (click)="uploadFile()">Upload</button>
+  <div *ngIf="upload.status === 'progress'">
+    <div class="progress" style="height: 20px; margin-bottom: 20px">
+      <div
+        class="progressbar"
+        role="progressbar"
+        [style.width.%]="upload.percentage"
+        aria-valuenow="25"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        {{ upload.percentage }}%
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="items.length > 0" class="UploadedFilecontainer">
+  <h2 class="title">Uploaded File Preview</h2>
+  <div class="image-grid">
+    <div class="image" *ngFor="let item of items">
+      <div *ngIf="item.fileType === 'image'">
+        <img src="{{ item.url }}" alt="{{ item.url }}" />
+      </div>
+      <video *ngIf="item.fileType === 'video'" width="200" height="200" controls>
+        <source src="{{ item.url }}" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
